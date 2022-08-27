@@ -25,12 +25,12 @@ body {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
-    padding: 0 !important;
+    padding: 0px !important;
     margin: -1px !important;
     overflow: hidden !important;
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
-    border: 0 !important;
+    border: 0px !important;
 }
 
 .link {
@@ -43,10 +43,10 @@ body {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-width: 350px;
-    height: 550px;
-    padding: 25px;
-    border-radius: 15px;
+    max-width: 21.875rem;
+    height: 34.375rem;
+    padding: 1.5625rem;
+    border-radius: 0.9375rem;
     box-sizing: border-box;
     background-color: hsl(216, 50%, 16%);
     color: hsl(215, 51%, 70%);
@@ -55,7 +55,6 @@ body {
 .card-preview {
     position: relative;
     width: 100%;
-    height: 60%;
 }
 
 .card-preview::before {
@@ -72,7 +71,7 @@ body {
     visibility: none;
     transition: .5s ease;
     background-color: hsl(178deg 100% 50% / 60%);
-    border-radius: 10px;
+    border-radius: 0.625rem;
     justify-content: center;
     align-items: center;
 }
@@ -84,19 +83,20 @@ body {
 
 .card-img {
     width: 100%;
-    border-radius: 10px;
+    height: 100%;
+    border-radius: 0.625rem;
 
 }
 
 .img {
     width: 100%;
     height: 100%;
-    border-radius: 10px;
+    border-radius: 0.625rem;
     object-fit: contain;
 }
 
 .icon {
-    margin-right: 5px;
+    margin-right: 0.3125rem;
 }
 
 .card-info {
@@ -109,7 +109,7 @@ body {
 .card-title {
     color: hsl(0, 0%, 100%);
     font-weight: 600;
-    font-size: 24px;
+    font-size: 1.5rem;
 }
 
 .card-title:hover {
@@ -138,16 +138,16 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-top: 1px solid hsl(215, 51%, 70%);
-    height: 25px;
-    padding: 25px 0px 0px 0px;
+    border-top: 0.0625rem solid hsl(215, 51%, 70%);
+    height: 1.5625rem;
+    padding: 1.5625rem 0px 0px 0px;
 }
 
 .creator-avatar {
     height: 100%;
     border-radius: 50%;
-    border: 1px solid hsl(0, 0%, 100%);
-    margin-right: 15px;
+    border: 0.0625rem solid hsl(0, 0%, 100%);
+    margin-right: 0.9375rem;
 }
 
 .creator-name {
@@ -161,10 +161,10 @@ body {
 }
 
 .attribution {
-    font-size: 14px;
+    font-size: 0.875rem;
     text-align: center;
     position: absolute;
-    bottom: 10px;
+    bottom: 0.625rem;
     color: white;
 }
 
