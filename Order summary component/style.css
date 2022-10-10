@@ -1,0 +1,177 @@
+@font-face {
+    font-family: "RedHatDisplay-Black";
+    src: url("resources/fonts/RedHatDisplay-Medium.ttf") format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RedHatDisplay-Black";
+    src: url("resources/fonts/RedHatDisplay-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "RedHatDisplay-Black";
+    src: url("resources/fonts/RedHatDisplay-Black.ttf") format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: RedHatDisplay-Black;
+}
+
+:root {
+
+    --Pale-blue: hsl(225, 100%, 94%);
+    --Bright-blue: hsl(245, 75%, 52%);
+    --Very-pale-blue: hsl(225, 100%, 98%);
+    --Desaturated-blue: hsl(224, 23%, 55%);
+    --soft-blue: hsl(244.9, 64.2%, 62.7%);
+    --Dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+    background-color: var(--Pale-blue);
+    background-image: url("resources/images/pattern-background-desktop.svg");
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+button {
+    border: none;
+    background-color: unset;
+    cursor: pointer;
+    justify-content: center;
+}
+
+.order {
+    display: flex;
+    flex-direction: column;
+    max-width: 21rem;
+    box-shadow: 0px 1.25rem 1.25rem 0.0625rem hsl(212deg 33% 81%);
+    border-radius: 0.9375rem;
+    text-align: center;
+    overflow: hidden !important;
+    font-size: 0.875rem;
+    background-color: white;
+    color: var(--Desaturated-blue)
+}
+
+.order-summary {
+    display: flex;
+    flex-direction: column;
+    padding: 1.875rem;
+}
+
+.order-title {
+    font-size: 1.5625rem;
+    font-weight: 900;
+    margin: 0.9375rem 0px;
+    color: var(--Dark-blue)
+}
+
+.order-msg {
+    text-align: center;
+    line-height: 1.25rem;
+}
+
+.product {
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+    padding: 0.9375rem;
+    background-color: var(--Very-pale-blue);
+    margin: 1.5625rem 0px;
+    border-radius: 0.625rem;
+    align-items: center;
+}
+
+.product-summary {
+    width: max-content;
+    text-align: left;
+    line-height: 1.375rem;
+}
+
+.product-type {
+    font-size: 0.9375rem;
+    color: var(--Dark-blue);
+    font-weight: 700;
+}
+
+.product-link {
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.product-link:hover {
+    color: var(--soft-blue)
+}
+
+.hightlight-button {
+    background-color: var(--Bright-blue);
+    border-radius: 0.625rem;
+    padding: 0.75rem 0px;
+    color: white;
+    font-weight: 600;
+    box-shadow:0px 0.9rem 0.9rem 0.2rem hsl(246deg 52% 90%);
+}
+
+.hightlight-button:hover {
+    background-color: var(--soft-blue);
+}
+
+.sublink {
+    margin-top: 1.25rem;
+    text-decoration: none;
+
+    color: unset;
+    font-weight: 600;
+}
+
+.sublink:hover {
+    color: var(--Dark-blue)
+}
+
+.attribution {
+    font-size: 0.875rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0.625rem;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--soft-blue);
+    font-weight: 700;
+}
