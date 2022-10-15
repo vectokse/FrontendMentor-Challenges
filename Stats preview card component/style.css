@@ -1,0 +1,218 @@
+@font-face {
+    font-family: "Inter";
+    src: url("resources/fonts/Inter-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Inter";
+    src: url("resources/fonts/Inter-Bold.ttf") format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "LexendDeca";
+    src: url("resources/fonts/LexendDeca-Regular.ttf") format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Inter;
+}
+
+:root {
+
+    /* main background */
+    --Very-dark-blue: hsl(233, 47%, 7%);
+    /* card background */
+    --Dark-desaturated-blue: hsl(244, 38%, 16%);
+    /* accent */
+    --Soft-violet: hsl(277, 64%, 61%);
+    /*main heading*/
+    --White: hsl(0, 0%, 100%);
+    /* main paragraph */
+    --Slightly-transparent-white: hsla(0, 0%, 100%, 0.75);
+    /* main heading, stats */
+    --Slightly-transparent-grey: hsla(0, 0%, 100%, 0.6);
+}
+
+body {
+    background-color: var(--Very-dark-blue);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+.img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.img--MultipleMixBlendMode{
+    mix-blend-mode: multiply;
+    opacity: 0.75;
+}
+
+.sr-only {
+    position: absolute !important;
+    width: 1px !important;
+    height: 1px !important;
+    padding: 0 !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    clip: rect(0, 0, 0, 0) !important;
+    white-space: nowrap !important;
+    border: 0 !important;
+}
+
+.previewCard {
+    display: flex;
+    max-width: 1090px;
+    margin: 1.5625rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    background-color: var(--Dark-desaturated-blue);
+    color: var(--White);
+    font-size: 0.9375rem;
+}
+
+.previewCard-info{
+    padding: 4rem 4.6875rem;
+    display: flex;
+    flex: 50%;
+    row-gap: 4rem;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.previewCard-header{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.previewCard-title{
+    font-size: 2.25rem;
+}
+
+.titleHighlights{
+    color: var(--Soft-violet);
+}
+
+.previewCard-description{
+    max-width: 23rem;
+    color: var(--Slightly-transparent-grey);
+    line-height: 1.8rem;
+}
+
+.previewCard-img{
+    flex: 50%;
+    background-color: var(--Soft-violet);
+}
+
+.previewCard-stats{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 23rem;
+    column-gap: 2rem;
+    row-gap: 1rem;
+}
+
+.statItem{
+    display: flex;
+    flex-direction: column;
+}
+
+.statItem-value{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.statItem-title{
+    margin-top: 0.5rem;
+    font-family: LexendDeca;
+    text-transform: uppercase;
+    color: var(--Slightly-transparent-grey);
+    font-size: 0.75rem;
+    letter-spacing: 0.125rem;
+}
+
+.attribution {
+    font-size: 0.875rem;
+    text-align: center;
+    position: absolute;
+    bottom: 0.625rem;
+    color :white;
+}
+
+.attribution a {
+    text-decoration: none;
+    color: var(--Soft-violet);
+    font-weight: 700;
+}
+
+@media (max-width: 840px) {
+
+    .previewCard{
+        flex-direction: column-reverse;
+        max-width: 37.5rem;
+    }
+
+    .previewCard-info{
+        padding: 2rem 3rem;
+        align-items: center;
+        text-align: center;
+        row-gap: 2rem;
+    }
+
+    .previewCard-description{
+        max-width: unset;
+    }
+}
+
+@media (max-width: 500px) {
+
+    .previewCard{
+        max-width: 28.125rem;
+        margin :5vw;
+    }
+
+    .previewCard-info{
+        padding: 1.875rem 2.5rem 1.875rem 2.5rem;
+    }
+
+    .previewCard-title{
+        font-size: 1.875rem;
+    }
+
+    .previewCard-description{
+        line-height: 1.5;
+    }
+
+    .previewCard-stats{
+        flex-direction: column;
+    }
+}
