@@ -1,9 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    font-family: Outfit;
-}
-
 @font-face {
     font-family: "Outfit";
     src: url("resources/fonts/Outfit-Regular.ttf") format('truetype');
@@ -11,26 +5,40 @@
     font-style: normal;
 }
 
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Outfit, sans-serif;
+}
+
+:root {
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Very-dark-blue-BG: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
 body {
-    background-color: hsl(217, 54%, 11%);
-    display: flex;
-    flex-direction: column;
+    background-color: var(--Very-dark-blue-BG);
+    display: grid;
+    grid-template-rows: auto 3.125rem;
     justify-content: center;
     align-items: center;
     height: 100vh;
-
 }
 
 .sr-only {
     position: absolute !important;
     width: 1px !important;
     height: 1px !important;
-    padding: 0px !important;
+    padding: 0 !important;
     margin: -1px !important;
     overflow: hidden !important;
     clip: rect(0, 0, 0, 0) !important;
     white-space: nowrap !important;
-    border: 0px !important;
+    border: 0 !important;
 }
 
 .link {
@@ -48,8 +56,8 @@ body {
     padding: 1.5625rem;
     border-radius: 0.9375rem;
     box-sizing: border-box;
-    background-color: hsl(216, 50%, 16%);
-    color: hsl(215, 51%, 70%);
+    background-color: var(--Very-dark-blue-card);
+    color: var(--Soft-blue);
 }
 
 .card-preview {
@@ -61,14 +69,9 @@ body {
     content: url(resources/images/icon-view.svg);
     position: absolute;
     display: flex;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
     height: 100%;
     width: 100%;
     opacity: 0;
-    visibility: none;
     transition: .5s ease;
     background-color: hsl(178deg 100% 50% / 60%);
     border-radius: 0.625rem;
@@ -78,14 +81,12 @@ body {
 
 .card-preview:hover::before {
     opacity: 1;
-
 }
 
 .card-img {
     width: 100%;
     height: 100%;
     border-radius: 0.625rem;
-
 }
 
 .img {
@@ -107,21 +108,19 @@ body {
 }
 
 .card-title {
-    color: hsl(0, 0%, 100%);
+    color: var(--White);
     font-weight: 600;
     font-size: 1.5rem;
 }
 
 .card-title:hover {
-    color: hsl(178, 100%, 50%);
+    color: var(--Cyan);
     transition: 0.5s;
-
 }
 
 .card-detaile {
     display: flex;
     justify-content: space-between;
-
 }
 
 .card-detaile>p {
@@ -131,43 +130,41 @@ body {
 
 .card-price {
     font-weight: 600;
-    color: hsl(178, 100%, 50%);
+    color: var(--Cyan);
 }
 
 .card-creator {
     display: flex;
     flex-direction: row;
     align-items: center;
-    border-top: 0.0625rem solid hsl(215, 51%, 70%);
+    border-top: 0.0625rem solid var(--Very-dark-blue-line);
     height: 1.5625rem;
-    padding: 1.5625rem 0px 0px 0px;
+    padding: 1.5625rem 0 0 0;
 }
 
 .creator-avatar {
     height: 100%;
     border-radius: 50%;
-    border: 0.0625rem solid hsl(0, 0%, 100%);
+    border: 0.0625rem solid var(--White);
     margin-right: 0.9375rem;
 }
 
 .creator-name {
-    color: hsl(0, 0%, 100%);
+    color:var(--White);
 }
 
 .creator-name:hover {
-    color: hsl(178, 100%, 50%);
+    color: var(--Cyan);
     transition: 0.5s;
-
 }
 
 .attribution {
     font-size: 0.875rem;
     text-align: center;
-    position: absolute;
-    bottom: 0.625rem;
-    color: white;
+    padding: 0.625rem;
+    color: var(--White);
 }
 
 .attribution a {
-    color: hsl(215, 51%, 70%);
+    color: var(--Soft-blue);
 }
